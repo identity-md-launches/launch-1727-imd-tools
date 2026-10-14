@@ -382,7 +382,7 @@ contract IMDToolsTest is Test {
     }
 
     function testFuzz_TransferConservesSupply(address recipient, uint256 rawAmount) public {
-        vm.assume(recipient != address(0) && recipient != address(this));
+        if (recipient == address(0) || recipient == address(this)) recipient = alice;
         uint256 amount = bound(rawAmount, 0, SUPPLY);
         assertTrue(token.transfer(recipient, amount));
         assertEq(token.balanceOf(address(this)), SUPPLY - amount);
