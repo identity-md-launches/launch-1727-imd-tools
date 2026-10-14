@@ -1,0 +1,20 @@
+{
+  "kind": "custom_token",
+  "token": {
+    "contract": "IMDTools",
+    "name": "IMD Tools",
+    "symbol": "TOOLS",
+    "decimals": 18,
+    "constructorArgs": [],
+    "totalSupply": "1000000000000000000000000000"
+  },
+  "contracts": [],
+  "pool": {
+    "pairedCurrency": "0x5f7bb59365ce557c26dbcaa4ee9d39a4b95b7127",
+    "fee": 12500,
+    "tickSpacing": 60,
+    "initialPrice": "79228162514264337593543950336"
+  },
+  "economics": {"poolBps":8800,"initialMarketCapWei":"2500000000000000000000","remainderTo":"0x667dde67817225159f08e34b836ce1a7f669c028"},
+  "notes": "IMDTools is a fixed-supply ERC-20 with ordinary, untaxed transfers. Its argument-free constructor mints all 1,000,000,000 TOOLS with 18 decimals once to msg.sender, the factory during launch. It exposes no post-deployment mint, burn, ownership, pause, blacklist or upgrade entrypoints. No application contracts or initialization calls are included. The pool pairs TOOLS with IMD. initialPrice records provenance; the deployer derives the opening price from economics.initialMarketCapWei and totalSupply."
+}
